@@ -10,11 +10,37 @@
     "type": "git",
     "url": "git+https://github.com/theceejay123/anibot-2.0.git"
   },
-  "keywords": ["bot", "discord", "discordjs", "discordbot", "anibot"],
+  "keywords": [
+    "bot",
+    "discord",
+    "discordjs",
+    "discordbot",
+    "anibot"
+  ],
   "author": "Ceejay Pimentel <ceejaypimentel@hotmail.ca>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/theceejay123/anibot-2.0/issues"
   },
-  "homepage": "https://github.com/theceejay123/anibot-2.0#readme"
+  "homepage": "https://github.com/theceejay123/anibot-2.0#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.0",
+    "@types/ws": "^8.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0",
+    "ts-toolbelt": "^9.6.0",
+    "utility-types": "^3.10.0"
+  }
 }
