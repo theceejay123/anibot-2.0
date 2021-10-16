@@ -1,0 +1,11 @@
+{
+  "prefix": "!",
+  "modLogChannel": "mod-log",
+  "modRole": "Moderator",
+  "adminRole": "Administrator",
+  "systemNotice": true,
+  "commandReply": true,
+  "welcomeChannel": "welcome",
+  "welcomeMessage": "Say hellow to {{user}}, everyone! We all need a warm welcome sometimes",
+  "welcomeEnabled": false
+}
