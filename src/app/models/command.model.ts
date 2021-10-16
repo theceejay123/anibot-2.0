@@ -1,6 +1,11 @@
 import { Message } from "discord.js";
 import { App } from "../app";
 
+/**
+ * CommandArgs model
+ * CommandArgs object 
+ */
+
 interface ICommandArgs {
 	client?: App;
 	message?: Message;
@@ -18,6 +23,11 @@ export class CommandArgs implements ICommandArgs {
 		this.args = options.args || new Array<string>();
 	}
 }
+
+/**
+ * Command model
+ * Command object
+ */
 
 interface ICommand {
 	name?: string;

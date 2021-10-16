@@ -17,6 +17,8 @@ export class App extends Client {
 	}
 
 	async init() {
+    await this.utility.loadAllCommands();
+    await this.utility.loadAllEvents();
 		await this.login(this.config.token);
 	}
 }
