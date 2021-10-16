@@ -4,7 +4,9 @@
   "description": "Anibot 2.0 ~ Written in TypeScript",
   "main": "dist",
   "scripts": {
-    "test": ""
+    "start:dev": "nodemon",
+    "start": "pnpm run build && node ./dist/index.js",
+    "build": "pnpm run prebuild && tsc"
   },
   "repository": {
     "type": "git",
