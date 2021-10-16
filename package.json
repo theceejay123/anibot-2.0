@@ -1,0 +1,20 @@
+{
+  "name": "anibot_2.0",
+  "version": "1.0.0",
+  "description": "Anibot 2.0 ~ Written in TypeScript",
+  "main": "dist",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theceejay123/anibot-2.0.git"
+  },
+  "keywords": ["bot", "discord", "discordjs", "discordbot", "anibot"],
+  "author": "Ceejay Pimentel <ceejaypimentel@hotmail.ca>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theceejay123/anibot-2.0/issues"
+  },
+  "homepage": "https://github.com/theceejay123/anibot-2.0#readme"
+}
