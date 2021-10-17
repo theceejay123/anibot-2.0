@@ -31,17 +31,20 @@ export class CommandArgs implements ICommandArgs {
 
 interface ICommand {
 	name?: string;
+	description?: string;
 	aliases?: Array<string>;
 	execute?: (args: ICommandArgs) => Promise<unknown | void> | unknown | void;
 }
 
 export class Command implements ICommand {
 	name?: string;
+	description?: string;
 	aliases?: Array<string>;
 	execute?: (args: CommandArgs) => Promise<unknown | void> | unknown | void;
 
 	constructor(options: ICommand = {}) {
 		this.name = options.name || "";
+		this.description = options.description || "";
 		this.aliases = options.aliases || new Array<string>();
 		this.execute = options.execute;
 	}

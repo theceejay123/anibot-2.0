@@ -1,6 +1,6 @@
 {
   "name": "anibot_2.0",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Anibot 2.0 ~ Written in TypeScript",
   "main": "dist",
   "scripts": {
