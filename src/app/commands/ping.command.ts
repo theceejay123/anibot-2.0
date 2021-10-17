@@ -8,25 +8,26 @@ const Ping: Command = new Command({
 	aliases: ["ping", "p"],
 	execute: ({ client, message }) => {
 		return message?.channel.send("Pinging...").then((msg) => {
-			const cmdUtility = new CommandUtility();
-			const name = message.member.nickname
+			const cmdUtility: CommandUtility = new CommandUtility();
+			const name: string = message.member.nickname
 				? message.member.nickname
 				: message.member.user.username;
-			const phrase = cmdUtility.getRandomPhrases(
+			const phrase: string = cmdUtility.getRandomPhrases(
 				name,
 				cmdUtility.getRandomHonorific().name,
 			);
-			msg.edit({
-				content: "Ping Successful",
+			const executionTime: number = msg.createdTimestamp - message.createdTimestamp;
+			msg.delete();
+			message.channel.send({
 				embeds: [
 					new MessageEmbed({
 						title: phrase,
-						description: `It took ${client.ws.ping}ms to ping.`,
+						description: `It took ${executionTime}ms to ping.`,
 						timestamp: new Date(),
 						footer: {
 							text: `Bot Latency: ${
 								client.ws.ping
-							}ms | Execution time: ${Math.round(client.ws.ping)}ms`,
+							}ms | Execution time: ${Math.round(executionTime)}ms`,
 							iconURL: client.user.displayAvatarURL()
 						},
 					}),
