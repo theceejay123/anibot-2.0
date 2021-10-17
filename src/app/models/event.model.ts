@@ -1,5 +1,10 @@
 import { App } from "../app";
 
+/**
+ * Event model
+ * Event object
+ */
+
 interface IEvent {
   name?: string;
   execute?: (app: App, ...args: any[]) => Promise<unknown | void> | unknown | void;

@@ -1,8 +1,8 @@
 import { ClientOptions } from "discord.js";
 
 /**
- * AppIntents model
- * AppIntents object
+ * AppOptions model
+ * AppOptions object
  */
 interface IAppOptions {
 	clientOptions?: ClientOptions;
