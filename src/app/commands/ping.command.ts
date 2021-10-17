@@ -1,3 +1,4 @@
+import { MessageEmbed } from "discord.js";
 import { CommandUtility } from "../../utils/command.utility";
 import { Command } from "../models/command.model";
 
@@ -11,6 +12,25 @@ const Ping: Command = new Command({
 			const name = message.member.nickname
 				? message.member.nickname
 				: message.member.user.username;
+			const phrase = cmdUtility.getRandomPhrases(
+				name,
+				cmdUtility.getRandomHonorific().name,
+			);
+			msg.edit({
+				embeds: [
+					new MessageEmbed({
+						title: phrase,
+						description: `It took ${client.ws.ping}ms to ping.`,
+						timestamp: new Date(),
+						footer: {
+							text: `Bot Latency: ${
+								client.ws.ping
+							}ms | Execution time: ${Math.round(client.ws.ping)}ms`,
+							iconURL: client.user.displayAvatarURL()
+						},
+					}),
+				],
+			});
 		});
 	},
 });
