@@ -17,6 +17,7 @@ const Ping: Command = new Command({
 				cmdUtility.getRandomHonorific().name,
 			);
 			msg.edit({
+				content: "Ping Successful",
 				embeds: [
 					new MessageEmbed({
 						title: phrase,
